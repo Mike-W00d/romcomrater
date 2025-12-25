@@ -1,27 +1,29 @@
 services:
   backend:
+    tty: true
+    stdin_open: true
     build:
       context: .
       dockerfile: ./backend/Dockerfile
       tags:
         - "romcomrater:backend-dev"
-    working_dir: /workspace/backend
-    entrypoint: /workspace/backend/entrypoint.sh
-    command: uv run python main.py
+    entrypoint: ["/workspace/backend/entrypoint.sh"]
+    command: ["uv", "run", "python", "main.py"]
     volumes:
       - ./:/workspace
     ports:
       - 8080:8080
     
   frontend:
+    tty: true
+    stdin_open: true
     build:
       context: .
       dockerfile: ./frontend/Dockerfile
       tags:
         - "romcomrater:frontend-dev"
-    working_dir: /workspace/frontend
-    entrypoint: /workspace/frontend/entrypoint.sh
-    command: npm run dev
+    entrypoint: ["/workspace/frontend/entrypoint.sh"]
+    command: ["npm", "run", "dev"]
     volumes:
       - ./:/workspace
     ports:

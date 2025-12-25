@@ -10,7 +10,6 @@
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
-        "x86_64-darwin"
         "aarch64-linux"
         "aarch64-darwin"
       ];
@@ -60,31 +59,21 @@
             builtins.elem (lib.getName pkg) [ "terraform" ];
         };
 
+        packages.backend = pkgs.symlinkJoin {
+          name = "backend-env";
+          paths = core_packages ++ backend_packages;
+        };
+
+        packages.frontend = pkgs.symlinkJoin {
+          name = "frontend-env";
+          paths = core_packages ++ frontend_packages;
+        };
+
         devShells.default = pkgs.mkShell {
           buildInputs = all_packages;
           shellHook = ''
             echo ""
             echo "🎬 Welcome to Rom Com Rater 🎬"
-            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-            echo ""
-          '';
-        };
-
-        devShells.backend = pkgs.mkShell {
-          buildInputs = core_packages ++ backend_packages;
-          shellHook = ''
-            echo ""
-            echo "🐍 Rom Com Rater backend 🐍"
-            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-            echo ""
-          '';
-        };
-
-        devShells.frontend = pkgs.mkShell {
-          buildInputs = core_packages ++ frontend_packages;
-          shellHook = ''
-            echo ""
-            echo "⚡ Rom Com Rater frontend ⚡"
             echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
             echo ""
           '';
