@@ -1,6 +1,6 @@
 import { UserDetails } from "../components/user-details";
-import { UserButton } from "@/node_modules/@clerk/nextjs/dist/types";
-import { auth } from "@/node_modules/@clerk/nextjs/dist/types/server";
+import { UserButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 import { CodeSwitcher } from "../components/code-switcher";
 import { LearnMore } from "../_template/components/learn-more";
 import { Footer } from "../_template/components/footer";

@@ -1,6 +1,6 @@
 "use client";
 
-import { useOrganization, useSession, useUser } from "@/node_modules/@clerk/nextjs/dist/types";
+import { useOrganization, useSession, useUser } from "@clerk/nextjs";
 
 function Row({
   desc,

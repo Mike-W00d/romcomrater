@@ -58,6 +58,10 @@ In the project root directory:
 docker compose up
 ```
 
+The frontend will run on <http://localhost:3000>
+
+The backend will run on <http://localhost:8080>
+
 # To Do
 
 - Base fast api python setup

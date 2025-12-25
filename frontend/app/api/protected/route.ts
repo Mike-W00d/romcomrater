@@ -1,4 +1,4 @@
-import { auth } from "@/node_modules/@clerk/nextjs/dist/types/server";
+import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 
 export async function GET() {

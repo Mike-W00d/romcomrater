@@ -1,6 +1,6 @@
 "use client";
 
-import { useOrganization, useSession, useUser } from "@/node_modules/@clerk/nextjs/dist/types";
+import { useOrganization, useSession, useUser } from "@clerk/nextjs";
 import clsx from "clsx";
 import { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";

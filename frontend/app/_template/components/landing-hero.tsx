@@ -1,4 +1,4 @@
-import { SignInButton, SignedIn, SignedOut } from "@/node_modules/@clerk/nextjs/dist/types";
+import { SignInButton, SignedIn, SignedOut } from "@clerk/nextjs";
 import screenshotDevices from "../images/user-button@2xrl.webp";
 import signIn from "../images/sign-in@2xrl.webp";
 import verify from "../images/verify@2xrl.webp";
