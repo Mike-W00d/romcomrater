@@ -30,11 +30,11 @@
           zsh
           terraform
           terragrunt
-          kubernetes
+          kubectl
           kubernetes-helm
           uv
           nodejs_24
-        ];
+        ;]
         
         dev_tools = with pkgs; [
           k9s
