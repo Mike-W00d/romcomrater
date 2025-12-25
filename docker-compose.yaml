@@ -10,6 +10,8 @@ services:
     command: uv run python main.py
     volumes:
       - ./:/workspace
+    ports:
+      - 8080:8080
     
   frontend:
     build:
@@ -22,3 +24,5 @@ services:
     command: npm run dev
     volumes:
       - ./:/workspace
+    ports:
+      - 3000:3000
