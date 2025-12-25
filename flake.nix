@@ -43,6 +43,7 @@
           zsh
           k9s
           docker-compose
+          ctop
         ];
 
         all_packages = core_packages
