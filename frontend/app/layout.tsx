@@ -1,4 +1,4 @@
-import { ClerkProvider } from "@/node_modules/@clerk/nextjs/dist/types";
+import { ClerkProvider } from "@clerk/nextjs"
 import type { Appearance } from "@clerk/types";
 import "./globals.css";
 import Script from "next/script";
