@@ -9,7 +9,7 @@ This project uses a nix development shell for all core dependencies and direnv t
 - Install nix: https://nixos.org/download/
 - Install direnv: https://direnv.net/docs/installation.html
 
-Enabled flakes in nix config:
+Enable flakes in nix config: 
 
 ```
 sudo vim /etc/nix/nix.conf
@@ -21,7 +21,20 @@ Add line:
 experimental-features = nix-command flakes
 ```
 
-Then enable nix and enter development shell in the project root directory:
+Add direnv shell hook to zsh:
+
+```
+vim ~/.zshrc
+```
+
+Add lines:
+
+```
+eval "$(direnv hook zsh)"
+export DIRENV_LOG_FORMAT=
+```
+
+Then in the project root directory enter the nix development shell by enabling direnv:
 
 ```
 direnv allow
