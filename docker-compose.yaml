@@ -19,6 +19,6 @@ services:
         - "romcomrater:frontend-dev"
     working_dir: /workspace/frontend
     entrypoint: /workspace/frontend/entrypoint.sh
-    command: npm install && npm run dev
+    command: npm run dev
     volumes:
       - ./:/workspace
