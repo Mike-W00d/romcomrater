@@ -10,3 +10,15 @@ services:
     command: uv run python main.py
     volumes:
       - ./:/workspace
+    
+  frontend:
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+      tags:
+        - "romcomrater:frontend-dev"
+    working_dir: /workspace/frontend
+    entrypoint: /workspace/frontend
+    command: npm run dev
+    volumes:
+      - ./:/workspace
