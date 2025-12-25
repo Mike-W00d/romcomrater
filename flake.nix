@@ -19,7 +19,7 @@
       let
         core_packages = with pkgs; [
           bash
-          coreutils
+          coreutils-full
           git
         ];
 

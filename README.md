@@ -41,8 +41,24 @@ Then in the project root directory enter the nix development shell by enabling d
 direnv allow
 ```
 
+### Build Dev Containers
+
+
+In the project root directory:
+
+```
+docker compose build
+```
+
+### Start The Development Environment
+
+In the project root directory:
+
+```
+docker compose up
+```
+
 # To Do
 
 - Base fast api python setup
-- Docker compose
 - CI/CD pipeline - test, build, deploy

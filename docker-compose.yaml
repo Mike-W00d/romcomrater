@@ -5,8 +5,8 @@ services:
       dockerfile: ./backend/Dockerfile
       tags:
         - "romcomrater:backend-dev"
-    working_dir: /workspace/backend      
-    entrypoint: ["bash", "-lc"]
-    command: nix develop path:/workspace -c uv run python -m backend
+    working_dir: /workspace/backend
+    entrypoint: /workspace/backend/entrypoint.sh
+    command: uv run python main.py
     volumes:
       - ./:/workspace
